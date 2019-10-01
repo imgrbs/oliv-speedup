@@ -30,14 +30,14 @@ function trackCheckbox(e) {
   _gaq.push(['_trackEvent', e.target.checked, 'clicked']);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   _gaq.push(['_trackEvent', 'extension open up', 'loaded']);
 
   var speed = document.getElementById('speed');
-  speed.addEventListener('change', trackSpeedClick); 
+  speed.addEventListener('change', trackSpeedClick);
 
   var disableButton = document.getElementById('disbled-btn');
-  disableButton.addEventListener('change', trackCheckbox); 
+  disableButton.addEventListener('change', trackCheckbox);
 
   var buttons = document.querySelectorAll('button');
   for (var i = 0; i < buttons.length; i++) {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
 let activeButton = document.getElementById('active');
 
 activeButton.onclick = function(element) {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     let SPEED = document.getElementById('speed').value;
     let DISBLED_USELESS_BUTTON = document.getElementById('disbled-btn').checked;
     const code = `
@@ -65,12 +65,10 @@ activeButton.onclick = function(element) {
             item.style.display = 'none';
         }
       }
-      console.log('%c speed up ${SPEED * 100}% ! ', 'background: #222; color: #bada55');
-    `
+      console.log('%c speed up ${SPEED *
+        100}% ! ', 'background: #222; color: #bada55');
+    `;
 
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code});
+    chrome.tabs.executeScript(tabs[0].id, { code });
   });
 };
-
