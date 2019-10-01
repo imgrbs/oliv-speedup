@@ -9,6 +9,9 @@
       }
     </style>
   </head>
+  <!-- Google Tag Manager -->
+  <script src="tag-manager.js"></script>
+  <!-- End Google Tag Manager -->
   <body>
     <label for="speed">Speed</label>
     <select name="speed" id="speed">
@@ -30,25 +33,10 @@
     <br />
     <button id='active'>Active</button>
   </body>
-  <script src="popup.js"></script>
-  <script>
-    var dataLayer = [];
-    document.getElementById('active').addEventListener('click', function() {
-      dataLayer.push({
-        speed: document.getElementById('speed').value,
-        clearButton: document.getElementById('disbled-btn').checked
-      })
-    })
-  </script>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W2J76S3"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-W2J76S3');</script>
-    <!-- End Google Tag Manager -->
+  <!-- End Google Tag Manager (noscript) -->
+  <script src="popup.js"></script>
+  <script src="user-insight.js"></script>
 </html>
