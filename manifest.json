@@ -6,10 +6,6 @@
     "default_popup": "popup.html"
   },
   "permissions": ["activeTab", "declarativeContent"],
-  "content_scripts": [{
-    "js": ["tag-manager.js", "user-insight.js"],
-    "matches": ["http://*/*", "https://*/*"]
-  }],
-  "content_security_policy": "script-src 'self' https://www.googletagmanager.com; object-src 'self'",
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
   "manifest_version": 2
 }
