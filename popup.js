@@ -14,8 +14,7 @@ activeButton.onclick = function(element) {
             item.style.display = 'none';
         }
       }
-
-      console.log('speed up ${SPEED * 100}% !');
+      console.log('%c speed up ${SPEED * 100}% ! ', 'background: #222; color: #bada55');
     `
 
     chrome.tabs.executeScript(
