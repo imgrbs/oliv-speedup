@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 // ****************** //
 // Google Analytics
 // ****************** //
@@ -28,14 +30,14 @@ function trackCheckbox(e) {
   _gaq.push(['_trackEvent', e.target.checked, 'clicked']);
 }
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
   _gaq.push(['_trackEvent', 'extension open up', 'loaded']);
 
   var speed = document.getElementById('speed');
-  speed.addEventListener('change', trackSpeedClick); 
+  speed.addEventListener('change', trackSpeedClick);
 
   var disableButton = document.getElementById('disbled-btn');
-  disableButton.addEventListener('change', trackCheckbox); 
+  disableButton.addEventListener('change', trackCheckbox);
 
   var buttons = document.querySelectorAll('button');
   for (var i = 0; i < buttons.length; i++) {
@@ -49,26 +51,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let activeButton = document.getElementById('active');
 
+// Inject the script when start the tabs
+chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+  chrome.tabs.executeScript(tabs[0].id, { file: 'script.js' });
+});
+
+// Handle when user clicks the `active` button
 activeButton.onclick = function(element) {
-  chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-    let SPEED = document.getElementById('speed').value;
-    let DISBLED_USELESS_BUTTON = document.getElementById('disbled-btn').checked;
-    const code = `
-      document.getElementsByTagName('video')[0].playbackRate = ${SPEED};
+  chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
+    let speed = document.getElementById('speed').value;
+    let isDisabledUselessButton = document.getElementById('disbled-btn')
+      .checked;
 
-      if (${DISBLED_USELESS_BUTTON}) {
-        var list = document.querySelectorAll('vg-cuepoint.ng-scope');
-        
-        for (let item of list) {
-            item.style.display = 'none';
-        }
-      }
-      console.log('%c speed up ${SPEED * 100}% ! ', 'background: #222; color: #bada55');
-    `
-
-    chrome.tabs.executeScript(
-        tabs[0].id,
-        {code});
+    chrome.tabs.sendMessage(tabs[0].id, {
+      speed,
+      isDisabledUselessButton
+    });
   });
 };
-
