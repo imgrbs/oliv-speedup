@@ -1,5 +1,5 @@
 # Olive Speed Up !
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors)
 
 เคยมั้ยที่รำคาญปุ่มโง่ ๆ บนวิดีโอใน Oliv ทำให้กรอคลิปไม่ได้ ?
 
@@ -29,6 +29,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/sgnsys3"><img src="https://avatars2.githubusercontent.com/u/17687743?v=4" width="100px;" alt="Pureewat Kaewpoy"/><br /><sub><b>Pureewat Kaewpoy</b></sub></a><br /><a href="https://github.com/imgrbs/oliv-speedup/commits?author=sgnsys3" title="Code">💻</a></td>
     <td align="center"><a href="http://phachara.me"><img src="https://avatars3.githubusercontent.com/u/20185035?v=4" width="100px;" alt="Phachara Kamthong"/><br /><sub><b>Phachara Kamthong</b></sub></a><br /><a href="https://github.com/imgrbs/oliv-speedup/commits?author=mixkungz" title="Code">💻</a></td>
     <td align="center"><a href="https://medium.com/@mild20091931"><img src="https://avatars2.githubusercontent.com/u/30386585?v=4" width="100px;" alt="Mild-TN"/><br /><sub><b>Mild-TN</b></sub></a><br /><a href="https://github.com/imgrbs/oliv-speedup/commits?author=mild20091931" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/artcheeze"><img src="https://avatars1.githubusercontent.com/u/25684433?v=4" width="100px;" alt="Surasak "/><br /><sub><b>Surasak </b></sub></a><br /><a href="https://github.com/imgrbs/oliv-speedup/commits?author=artcheeze" title="Code">💻</a></td>
   </tr>
 </table>
 
