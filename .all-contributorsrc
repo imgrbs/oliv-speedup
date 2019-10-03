@@ -1,0 +1,23 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "imgrbs",
+      "name": "ImagineRabbits",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/11602960?v=4",
+      "profile": "https://medium.com/@taekeerati",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "oliv-speedup",
+  "projectOwner": "imgrbs",
+  "repoType": "github",
+  "repoHost": "https://github.com"
+}
