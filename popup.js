@@ -24,6 +24,7 @@ function trackButtonClick(e) {
 
 function trackSpeedClick(e) {
   _gaq.push(['_trackEvent', e.target.value, 'selected']);
+  document.getElementById('active').click();
 }
 
 function trackCheckbox(e) {
@@ -44,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     buttons[i].addEventListener('click', trackButtonClick);
   }
 });
+
 
 // ****************** //
 // Core Features
